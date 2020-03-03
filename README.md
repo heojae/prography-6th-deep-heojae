@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------------------------------
 ##### 시작하기 전에
 
-우선 이것을 시작하기전에 이곳 [제 구글드라이브 모델저장소](https://drive.google.com/open?id=16QzPEIepI5gm5lmhgOVB7goNtTwO8RNX)에 들어가서   best_vgg_mnist.pt를 들고 와서   
+우선 이것을 시작하기전에 이곳 [제 구글드라이브 모델저장소](https://drive.google.com/open?id=16QzPEIepI5gm5lmhgOVB7goNtTwO8RNX)에 들어가서   best_mnist_vgg.pt를 들고 와서   
 test.py를 실행을 시켜주시면 됩니다. 
 
 
