@@ -21,15 +21,16 @@ Test set- best Accuracy: 9910/10000 (99%)
 
 ### MNIST 데이터를 RGB 채널로 변경해주세요.
 => transform에서, 이렇게 구현을 해두어습니다.
+'''
 transform = transforms.Compose([  
                 transforms.Resize((224,224)),  
                 transforms.ToTensor(),  
                 transforms.Lambda(lambda x: torch.cat([x, x, x], 0)),  
                 transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5]),  
                  ])  
-change input size from [1,28,28] -> [1,224,224]  
-change 1 dimension to 3 dimension [1,224,224] ->[3,224,224]
-
+#change input size from [1,28,28] -> [1,224,224]  
+#change 1 dimension to 3 dimension [1,224,224] ->[3,224,224]
+'''
 ----------------------------------------------------------------------------------------------------------
 
 ### (1)의 모델 구조에서 model initialization, inference 부분을 함수형태로 작성해주세요. (객체 형태로 작성하여도 무관합니다)  
@@ -37,8 +38,9 @@ change 1 dimension to 3 dimension [1,224,224] ->[3,224,224]
 model initialization   
 
 initialize model in model.py as VGG16 
-
+'''
 from model import VGG16           
+'''
 
 ----------------------------------------------------------------------------------------------------------
 ### Inference   
@@ -78,17 +80,18 @@ Test set- best Accuracy: 9910/10000 (99%)
 ### 구현한 모델의 ADT를 README.md에 간단히 요약해주세요.
 
 기본 VGG net을 기반으로, 아래와 같이 추가를 해주어서 network를 구성을 하였습니다.
-
+'''
 #######################################################################################  
-i think i need to torch.cat before to first Dense layer and
+#i think i need to torch.cat before to first Dense layer and
 
-i need to change [1,64,112,112] -> [1,512,7,7] 
+#i need to change [1,64,112,112] -> [1,512,7,7] 
 
-so i implement skip1 for this.
+#so i implement skip1 for this.
 
 self.skip1 = nn.Conv2d(64,512,kernel_size=6,padding=1,stride=18) 
 
 #######################################################################################  
+'''  
 이 skip1을 새로운 conv2_1의 input에 넣고, 나중에 Dense (fc6)에 들어가기전에 x = torch.cat((x, skip_connection), dim=1)으로 함께 들어가게 됩니다.
 
 ----------------------------------------------------------------------------------------------------------
