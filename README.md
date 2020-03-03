@@ -21,7 +21,7 @@ Test set- best Accuracy: 9910/10000 (99%)
 
 ### MNIST 데이터를 RGB 채널로 변경해주세요.
 => transform에서, 이렇게 구현을 해두어습니다.
-'''
+'''python
 transform = transforms.Compose([  
                 transforms.Resize((224,224)),  
                 transforms.ToTensor(),  
@@ -38,7 +38,7 @@ transform = transforms.Compose([
 model initialization   
 
 initialize model in model.py as VGG16 
-'''
+'''python
 from model import VGG16           
 '''
 
@@ -80,7 +80,7 @@ Test set- best Accuracy: 9910/10000 (99%)
 ### 구현한 모델의 ADT를 README.md에 간단히 요약해주세요.
 
 기본 VGG net을 기반으로, 아래와 같이 추가를 해주어서 network를 구성을 하였습니다.
-'''
+'''python
 #######################################################################################  
 #i think i need to torch.cat before to first Dense layer and
 
