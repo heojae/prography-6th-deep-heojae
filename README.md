@@ -13,34 +13,30 @@ Test set- best Accuracy: 9910/10000 (99%)
 
 
 ---------------------------------------------------------------------------------------------------------
-### train.py -> VGG16을 학습을 위한 코드이며, data 폴더에 mnist를 만든다. 
+##### train.py -> VGG16을 학습을 위한 코드이며, data 폴더에 mnist를 만든다. 
 그리고 best_mnist_vgg.pt 모델을 저장을 한다. 
 
-### test.py -> best_mnist_vgg.pt에서  모델을 들고와 mnist test set에 대해서 accuracy를 출력을 해주는 코드이다  
+##### test.py -> best_mnist_vgg.pt에서  모델을 들고와 mnist test set에 대해서 accuracy를 출력을 해주는 코드이다  
 best accuracy: 99.1 % 이다.  
 
-### inference.py => 모델을 불러와서, sample1.jpg 와 같은 jpg이미지들을 대상으로 결과와 이미지를 출력을 해주는 코드이다. 
+##### inference.py => 모델을 불러와서, sample1.jpg 와 같은 jpg이미지들을 대상으로 결과와 이미지를 출력을 해주는 코드이다. 
 
 
-i think inference do not need to be done in gpu, it could be done in cpu
-get model from model.py import VGG16  
-##### model = VGG16().to(device)  
 
-get model the best test accuracy.  
-##### model.load_state_dict(torch.load("best_mnist_vgg.pt"))  
+model = VGG16().to(device)  
+model.load_state_dict(torch.load("best_mnist_vgg.pt"))  
 
-change sample name in here. get jpg is recommended.  
-##### image_name="sample1.jpg"  
 
-##### image = image_loader(image_name, transform=transform, device=device)
-##### inference(model,image,image_name)  
+image_name="sample1.jpg"  
+image = image_loader(image_name, transform=transform, device=device)
+inference(model,image,image_name)  
 
 이런 구조로 이루어져있다 
 
 
-### model.py -> VGG16 의 변형된 모델을 정의를 해두었다. 
+##### model.py -> VGG16 의 변형된 모델을 정의를 해두었다. 
 
-### data 폴더   
+##### data 폴더   
 mnist를 위한 폴더이다 
 
 
