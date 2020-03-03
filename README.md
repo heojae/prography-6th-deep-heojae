@@ -7,7 +7,7 @@
 test.py를 실행을 시켜주시면 됩니다. 
 
 
-구글 드라이브에서 best_vgg_mnist.pt를 들고와서 test.py를 돌리면   
+구글 드라이브에서 best_mnist_vgg.pt를 들고와서 test.py를 돌리면   
 best accuracy 99.1이 나옵니다.   
 Test set- best Accuracy: 9910/10000 (99%)
 
