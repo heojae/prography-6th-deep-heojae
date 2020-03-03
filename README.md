@@ -1,11 +1,11 @@
 # prography-6th-deep-heojae
 
-우선 이것을 시작하기전에 이곳 [제 구글드라이브 모델저장소](https://drive.google.com/open?id=16QzPEIepI5gm5lmhgOVB7goNtTwO8RNX)에 들어가서 best_vgg_mnist.pt를 들고 와서 
+우선 이것을 시작하기전에 이곳 [제 구글드라이브 모델저장소](https://drive.google.com/open?id=16QzPEIepI5gm5lmhgOVB7goNtTwO8RNX)에 들어가서   best_vgg_mnist.pt를 들고 와서   
 test.py를 실행을 시켜주시면 됩니다. 
 
 
-구글 드라이브에서 best_vgg_mnist.pt를 들고와서 test.py를 돌리면 
-best accuracy 99.1이 나옵니다. 
+구글 드라이브에서 best_vgg_mnist.pt를 들고와서 test.py를 돌리면   
+best accuracy 99.1이 나옵니다.   
 Test set- best Accuracy: 9910/10000 (99%)
 
 
@@ -27,9 +27,9 @@ change 1 dimension to 3 dimension [1,224,224] ->[3,224,224]
 (1)의 모델 구조에서 model initialization, inference 부분을 함수형태로 작성해주세요. (객체 형태로 작성하여도 무관합니다)  
 model initialization   
 from model import VGG16        # i initialize model in model.py as VGG16  
-
+----------------------------------------------------------------------------------------------------------
 Inference   
-### inference.py 에서, image_name = "sample1.jpg"라고 되어 있는데, 이 이미지 이름만 바꾸어서 실행을 시키면 결과를 출력을 해줍니다.   
+inference.py 에서, image_name = "sample1.jpg"라고 되어 있는데, 이 이미지 이름만 바꾸어서 실행을 시키면 결과를 출력을 해줍니다.   
 
 (2)의 구조에서 Conv2_1의 입력을 첫번째 Dense 입력에 추가해주는 구조를 추가해주세요. (Skip connection 구조)  
 model.py에 VGG16 network 를 구현을 해두었으며,  
